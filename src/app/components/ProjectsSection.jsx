@@ -13,8 +13,8 @@ const projectsData = [
     description: "My Developer Portfolio is made with Next.js and highlights my skills, projects, awards, and education in a user-friendly way. Using Next.js ensures a smooth experience, showcasing my commitment to professionalism and innovation in web development.",
     image: "/projects/developer_portfolio.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/FromSunNews/my_portfolio",
+    previewUrl: "https://portfolio-fsn.vercel.app",
   },
   {
     id: 2,

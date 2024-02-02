@@ -128,7 +128,7 @@ const AboutSection = () => {
         <Image src='/images/about-image.png' width={500} height={500} alt='about image' className='rounded'/>
         <div className='mt-8 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-          <div className="flex flex-row justify-start mb-4">
+          <div className="flex flex-row justify-start mb-4 flex-wrap">
             <TabButton selectTab={() => handleTabChange('hard_skills')} active={tab === 'hard_skills'}>Hard Skills</TabButton>
             <TabButton selectTab={() => handleTabChange('soft_skills')} active={tab === 'soft_skills'}>Soft Skills</TabButton>
             <TabButton selectTab={() => handleTabChange('education')} active={tab === 'education'}>Education</TabButton>
