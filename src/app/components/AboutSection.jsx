@@ -80,7 +80,7 @@ const TAB_DATA = [
       <p className='text-base lg:text-lg'>
         In my academic pursuits, I&apos;ve had the privilege of garnering recognition for my commitment to innovation and excellence. The following awards stand as testaments to my dedication and passion. 
         <br />
-        <p className='underline font-bold'><a href='/ScannedAward.pdf' target='_blank'>See the scan here</a></p>
+        <p className='underline font-bold mt-1'><a href='/ScannedAward.pdf' target='_blank'>See the scan here</a></p>
       </p>
     ),
     title: "Awards",
@@ -95,21 +95,22 @@ const TAB_DATA = [
       </ul>
     ),
   },
-  // {
-  //   desc: (
-  //     <p className='text-base lg:text-lg'>
-  //       cerfi desc
-  //     </p>
-  //   ),
-  //   title: "Certifications",
-  //   id: "certifications",
-  //   content: (
-  //     <ul className="list-disc pl-2">
-  //       <li>AWS Cloud Practitioner</li>
-  //       <li>Google Professional Cloud Developer</li>
-  //     </ul>
-  //   ),
-  // },
+  {
+    desc: (
+      <p className='text-base lg:text-lg'>
+        
+      </p>
+    ),
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      // <ul className="list-disc pl-2">
+      //   <li>AWS Cloud Practitioner</li>
+      //   <li>Google Professional Cloud Developer</li>
+      // </ul>
+      <></>
+    ),
+  },
 ]
 
 const AboutSection = () => {
@@ -127,14 +128,14 @@ const AboutSection = () => {
         <Image src='/images/about-image.png' width={500} height={500} alt='about image' className='rounded'/>
         <div className='mt-8 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-          {TAB_DATA.find((t) => t.id === tab).desc}
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mb-4">
             <TabButton selectTab={() => handleTabChange('hard_skills')} active={tab === 'hard_skills'}>Hard Skills</TabButton>
             <TabButton selectTab={() => handleTabChange('soft_skills')} active={tab === 'soft_skills'}>Soft Skills</TabButton>
             <TabButton selectTab={() => handleTabChange('education')} active={tab === 'education'}>Education</TabButton>
             <TabButton selectTab={() => handleTabChange('awards')} active={tab === 'awards'}>Awards</TabButton>
-            {/* <TabButton selectTab={() => handleTabChange('certifications')} active={tab === 'certifications'}>Certifications</TabButton> */}
+            <TabButton selectTab={() => handleTabChange('certifications')} active={tab === 'certifications'}>Certifications</TabButton>
           </div>
+          {TAB_DATA.find((t) => t.id === tab).desc}
             <div className="mt-4 ml-3">
               {TAB_DATA.find((t) => t.id === tab).content}
             </div>
